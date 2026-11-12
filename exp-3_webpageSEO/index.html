@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Search + browser tab. Title ~60 chars, description ~150 chars. -->
+  <title>To-Do List – Simple Task Tracker That Saves in Your Browser</title>
+  <meta name="description" content="A clean, no-signup to-do list. Add tasks, tick them off, filter what's left, and pick up where you left off. Everything saves in your browser." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Once you deploy, add your real address here (needs the full https:// URL):
+  <link rel="canonical" href="https://your-site.example/" />
+  <meta property="og:url" content="https://your-site.example/" />
+  -->
+
+  <!-- Matches the browser bar to the app on phones, in light and dark mode -->
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#eef1fb" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f1120" media="(prefers-color-scheme: dark)" />
+
+  <!-- Tiny emoji favicon so no extra file is needed -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%85%3C/text%3E%3C/svg%3E" />
+
+  <!-- How the link looks when someone shares it -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="To-Do List – Simple Task Tracker" />
+  <meta property="og:description" content="Add tasks, tick them off, and come back later. Everything saves in your browser." />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Structured data: tells search engines what this page is -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "My To-Do List",
+    "description": "A simple to-do list that saves your tasks in your browser.",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "Any"
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Keyboard users can jump straight past the header -->
+  <a class="skip-link" href="#main">Skip to your tasks</a>
+
+  <main class="app" id="main" tabindex="-1">
+    <header>
+      <h1>My To-Do List</h1>
+      <!-- role="status" lets screen readers announce progress politely as it changes -->
+      <p class="subtitle" id="summary" role="status">Nothing here yet. Add your first task!</p>
+    </header>
+
+    <section aria-labelledby="add-heading">
+      <h2 class="sr-only" id="add-heading">Add a task</h2>
+
+      <form id="task-form" class="task-form" autocomplete="off">
+        <label class="sr-only" for="task-input">New task</label>
+        <input
+          type="text"
+          id="task-input"
+          name="task"
+          placeholder="What do you need to get done?"
+          maxlength="120"
+          aria-describedby="error-message"
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      <p id="error-message" class="error" role="alert"></p>
+    </section>
+
+    <section aria-labelledby="list-heading">
+      <h2 class="sr-only" id="list-heading">Your tasks</h2>
+
+      <div class="filters" id="filters" role="group" aria-label="Filter tasks">
+        <button type="button" class="filter active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter" data-filter="active" aria-pressed="false">Active</button>
+        <button type="button" class="filter" data-filter="completed" aria-pressed="false">Done</button>
+      </div>
+
+      <ul id="task-list" class="task-list" aria-label="Task list"></ul>
+
+      <button type="button" id="clear-completed" class="clear-btn" hidden>Clear completed</button>
+    </section>
+
+    <noscript>
+      <p class="noscript">This to-do list needs JavaScript to work. Please turn it on and refresh the page.</p>
+    </noscript>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
