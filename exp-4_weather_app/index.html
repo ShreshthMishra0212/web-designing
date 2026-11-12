@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Now</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Weather Now</h1>
+
+    <form id="search-form" class="search">
+      <input
+        id="city-input"
+        type="text"
+        placeholder="Search a city, e.g. Noida"
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="unit-toggle" role="group" aria-label="Temperature unit">
+      <button type="button" data-unit="celsius" class="active">°C</button>
+      <button type="button" data-unit="fahrenheit">°F</button>
+    </div>
+    <p id="status" class="status" hidden></p>
+
+    <section id="weather" class="weather" hidden>
+      <div class="current">
+        <p id="place" class="place"></p>
+        <p id="icon" class="icon"></p>
+        <p id="temp" class="temp"></p>
+        <p id="description" class="description"></p>
+
+        <div class="details">
+          <div><span>Feels like</span><strong id="feels"></strong></div>
+          <div><span>Humidity</span><strong id="humidity"></strong></div>
+          <div><span>Wind</span><strong id="wind"></strong></div>
+        </div>
+      </div>
+
+      <h2>Next 5 days</h2>
+      <ul id="forecast" class="forecast"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
