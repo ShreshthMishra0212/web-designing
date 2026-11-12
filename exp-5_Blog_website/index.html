@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Pocket Journal | Notes on code, career and life</title>
+    <meta name="description" content="A personal blog about learning to code, building things and figuring out life along the way.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top site-nav" id="siteNav">
+        <div class="container">
+            <a class="navbar-brand brand" href="#top">The Pocket Journal<span>.</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-lg-auto me-lg-3 mb-3 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#top">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#posts">Latest</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#subscribe">Newsletter</a></li>
+                </ul>
+
+                <form class="search-form" id="searchForm" role="search">
+                    <input class="form-control" type="search" id="searchInput" placeholder="Search posts" aria-label="Search posts">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="top">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <p class="eyebrow">Featured story</p>
+                    <h1 class="hero-title">What I wish someone had told me before my first hackathon</h1>
+                    <p class="hero-text">
+                        Forty-eight hours, three teammates and a demo that crashed on stage. Here is what
+                        went wrong, what went right, and why I'd do it all again tomorrow.
+                    </p>
+                    <div class="d-flex flex-wrap align-items-center gap-3">
+                        <a href="#" class="btn btn-dark btn-lg px-4">Read the story</a>
+                        <span class="hero-meta">Nov 10, 2026 · 8 min read</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="hero-visual" aria-hidden="true">
+                        <span class="hero-badge">Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container pb-5" id="posts">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+                    <h2 class="section-title mb-0">Latest posts</h2>
+
+                    <div class="filter-group" role="group" aria-label="Filter posts by category">
+                        <button type="button" class="filter-btn active" data-filter="all">All</button>
+                        <button type="button" class="filter-btn" data-filter="code">Code</button>
+                        <button type="button" class="filter-btn" data-filter="career">Career</button>
+                        <button type="button" class="filter-btn" data-filter="life">Life</button>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 g-4" id="postGrid">
+                    <div class="col post-item" data-category="code">
+                        <article class="post-card h-100">
+                            <div class="post-cover cover-1"><span class="post-tag">Code</span></div>
+                            <div class="post-body">
+                                <p class="post-meta">Nov 8, 2026 · 6 min read</p>
+                                <h3 class="post-title"><a href="#">Stop memorizing syntax, start reading other people's code</a></h3>
+                                <p class="post-excerpt">
+                                    Tutorials teach you the rules. Real repositories show you how people
+                                    actually break them. A few habits that made open source feel less scary.
+                                </p>
+                                <a href="#" class="read-link">Read more →</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col post-item" data-category="career">
+                        <article class="post-card h-100">
+                            <div class="post-cover cover-2"><span class="post-tag">Career</span></div>
+                            <div class="post-body">
+                                <p class="post-meta">Nov 5, 2026 · 5 min read</p>
+                                <h3 class="post-title"><a href="#">Why waiting for campus placements is the slowest plan</a></h3>
+                                <p class="post-excerpt">
+                                    If your college recruits late, you have time to build a portfolio,
+                                    ship a few projects and message real people. Here is a simple weekly routine.
+                                </p>
+                                <a href="#" class="read-link">Read more →</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col post-item" data-category="life">
+                        <article class="post-card h-100">
+                            <div class="post-cover cover-3"><span class="post-tag">Life</span></div>
+                            <div class="post-body">
+                                <p class="post-meta">Oct 30, 2026 · 4 min read</p>
+                                <h3 class="post-title"><a href="#">The 11 p.m. rule that saved my sleep and my grades</a></h3>
+                                <p class="post-excerpt">
+                                    I used to think late nights meant hard work. Turns out they mostly
+                                    meant bad code and worse moods. What I do differently now.
+                                </p>
+                                <a href="#" class="read-link">Read more →</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col post-item" data-category="code">
+                        <article class="post-card h-100">
+                            <div class="post-cover cover-4"><span class="post-tag">Code</span></div>
+                            <div class="post-body">
+                                <p class="post-meta">Oct 26, 2026 · 7 min read</p>
+                                <h3 class="post-title"><a href="#">Flask or Django? A practical way to pick one</a></h3>
+                                <p class="post-excerpt">
+                                    Both are great. The better question is what you are building and how
+                                    much of the setup you want to decide yourself.
+                                </p>
+                                <a href="#" class="read-link">Read more →</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col post-item" data-category="career">
+                        <article class="post-card h-100">
+                            <div class="post-cover cover-5"><span class="post-tag">Career</span></div>
+                            <div class="post-body">
+                                <p class="post-meta">Oct 21, 2026 · 6 min read</p>
+                                <h3 class="post-title"><a href="#">Cold messaging engineers without sounding desperate</a></h3>
+                                <p class="post-excerpt">
+                                    Short, specific and easy to answer. Three message templates that got
+                                    me replies, plus the ones that never did.
+                                </p>
+                                <a href="#" class="read-link">Read more →</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col post-item" data-category="life">
+                        <article class="post-card h-100">
+                            <div class="post-cover cover-6"><span class="post-tag">Life</span></div>
+                            <div class="post-body">
+                                <p class="post-meta">Oct 15, 2026 · 3 min read</p>
+                                <h3 class="post-title"><a href="#">Comparing yourself to others is a bad debugger</a></h3>
+                                <p class="post-excerpt">
+                                    Everyone's timeline looks cleaner from the outside. A short reminder
+                                    to measure progress against your own last month.
+                                </p>
+                                <a href="#" class="read-link">Read more →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="no-results d-none" id="noResults">
+                    <h3>Nothing found</h3>
+                    <p>Try a different word or switch the category filter.</p>
+                </div>
+            </div>
+
+            <aside class="col-lg-4">
+                <div class="sidebar">
+                    <section class="side-card" id="about">
+                        <h2 class="side-title">About the blog</h2>
+                        <p>
+                            I'm a computer science student writing about what I'm learning, building and
+                            getting wrong. No gurus, no shortcuts, just honest notes.
+                        </p>
+                    </section>
+
+                    <section class="side-card">
+                        <h2 class="side-title">Popular reads</h2>
+                        <ol class="popular-list">
+                            <li><a href="#">What I wish someone had told me before my first hackathon</a></li>
+                            <li><a href="#">Why waiting for campus placements is the slowest plan</a></li>
+                            <li><a href="#">Stop memorizing syntax, start reading other people's code</a></li>
+                        </ol>
+                    </section>
+
+                    <section class="side-card" id="subscribe">
+                        <h2 class="side-title">Get new posts</h2>
+                        <p class="mb-3">One email when something new goes up. Nothing else.</p>
+
+                        <form id="newsletterForm" novalidate>
+                            <div class="mb-2">
+                                <label for="newsletterEmail" class="visually-hidden">Email address</label>
+                                <input type="email" class="form-control" id="newsletterEmail" placeholder="you@example.com" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100">Subscribe</button>
+                        </form>
+
+                        <p class="form-note d-none" id="newsletterMsg" role="status">Thanks for subscribing. You're on the list.</p>
+                    </section>
+
+                    <section class="side-card">
+                        <h2 class="side-title">Topics</h2>
+                        <div class="tag-list">
+                            <span>Python</span>
+                            <span>React</span>
+                            <span>Hackathons</span>
+                            <span>Internships</span>
+                            <span>Study habits</span>
+                            <span>Projects</span>
+                        </div>
+                    </section>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <p class="mb-0">© <span id="year">2026</span> The Pocket Journal. Written with too much coffee.</p>
+            <a href="#top" class="footer-link">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
